@@ -1,8 +1,5 @@
 package cn.mcres.karlatemp.murlm;
 
-import cn.mcres.gyhhy.MXLib.yggdrasil.CustomYggdrasil;
-import cn.mcres.gyhhy.MXLib.yggdrasil.Yggdrasil;
-import cn.mcres.gyhhy.MXLib.yggdrasil.beans.Profile;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -239,22 +236,6 @@ public class MXURLMapping {
     }
 
     public static void main(String[] args) throws MalformedURLException {
-        bootstrap("");
-        System.out.println(getURLStreamHandler("https"));
-        System.out.println(getURLStreamHandler("http"));
-        Yggdrasil ygg = new CustomYggdrasil("https://timemc.cn");
-        System.out.println(ygg);
-        Profile p = ygg.queryProfiles("Karlatemp")[0];
-        p = ygg.queryProfile(p.id.toString(), true);
-        System.out.println(p.textures.skin.url);
-
-        URL u = new URL("https://timemc.cn/api/yggdrasil/");
-        String ff = u.getHost() + u.getPath();
-        while (ff.endsWith("/")) {
-            ff = ff.substring(0, ff.length() - 1);
-        }
-        System.out.println(ff);
-
     }
 
 }
